@@ -7,7 +7,6 @@ function  sendEmail(send_to, password) {
             auth: {
                 user: process.env.EMAIL_FROM,
                 pass: process.env.EMAIL_PASSWORD,
-                // pass: 22,
             }
         });
         
