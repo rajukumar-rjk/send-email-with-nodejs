@@ -1,17 +1,17 @@
 service: send-email-app
 
 provider:
- name: aws
- runtime: nodejs14.x
- memorySize: 128
- timeout: 10
- stage: production
-#  stage: dev
- region: ap-south-1
+  name: aws
+  runtime: nodejs14.x
+  memorySize: 128
+  timeout: 10
+  #stage: production
+  stage: dev
+  region: ap-south-1
 
 functions:
- api:
-   handler: lambda.universal
-   events:
-     - http: ANY {proxy+}
-     - http: ANY /
+  api:
+    handler: lambda.universal
+    events:
+      - http: ANY {proxy+}
+      - http: ANY /
